@@ -29,9 +29,9 @@ READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
 Do this step only once if your own Cloud Integration tenant does not have this package deployed. If you are using any of SAP TechEd 2024 Cloud Integration tenants this step is already done - DO NOT DO THIS step.  You should do this only on your own SAP Cloud Integration tenant, if not done.
 
 1. Go to the Home page of your SAP Integration Suite. Click on the "Discover" button and then "Integrations" on the left navigation pane.
-2. In the search Bar on the right, search for ["SAP IBP Reusable"]
+2. In the search Bar on the right, search for "SAP IBP Reusable"
 <br>![](/exercises/ex1/images/01_01_0010.png)
-3. If you see the "SAP IBP - Reusable Integration Flows", the press the "Copy" button on the top right corner. This would import the package in your SAP Cloud Integration tenant. 
+3. If you see the "SAP IBP - Reusable Integration Flows", select it and then press the "Copy" button on the top right corner. This would import the package in your SAP Cloud Integration tenant. 
 
 ## Exercise 1.4 Copy and Deploy SAP Cloud Integration Session IN280 package
 
