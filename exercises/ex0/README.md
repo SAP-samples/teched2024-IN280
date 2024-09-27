@@ -1,26 +1,40 @@
-# Level 1 Heading
+# Pre-requisites
 
-In this exercise, you will...
+Here is a list of requirements which you have to full fill before you start doing the excercises. 
 
-## Level 2 Heading
+## SAP IBP
+
+1. Make sure you have a valid license to use SAP IBP. Also check if your user has the permissions to create a communications scenario, a communication arrangement as well as a communication user.
+2. You need a planning area which is configured for demand planning. This requires you to be proficient in time series data in SAP IBP. You can also use a sample planning area for this purpose. 
+3. Cross check if you have some master data for Products, Location, Customer, Unit of measure as well as some time series data such as Sales (e.g. ACTUALSQTY) or Demand forecast (e.g. CONSDEMANDQTY)
+
+## SAP Integration Suite
+
+1. You can create a user using the folowing link for the test SAP Cloud Integration tenant which can be used for this excercise.
+2. Remember your user ID, password as well as the oAuth credentails which you would need to trigger the iFlows from a HTTPs client such as Postman or Bruno.
+
+Remember:- you would not be able to access the BTP sub account for this test tenant. You have to use your own sub account to create destinations for your SAP IBP instance and communication setup. We will do the these steps in the [Exercise 1 - Environment Setup - 1](../ex1/README.md)
+
+## Staging data
+
+Snowflake refers to the location of data files in a cloud storage as a stage. We need to use stages to load bulk data into Snwoflake. [Overview of data loading](https://docs.snowflake.com/en/user-guide/data-load-overview) gives you an idea of different options you have to create these external stages.
+
+1. You need an account on one of the following Hyperscalers :- Amazon Web Services or Microsoft Azure or Google Cloud Platform for storing data. In case of Amazon Web Services - use S3 as a storage. On Microsoft Azure - use Azure Blob store and on Google Cloud Platform use Big Query as your store. 
+2. Make sure you store the oAuth credentails for these. In this example, we will be using AWS S3 buckets as a staging location. Hence you would need the S3 Bucket ID, your Access Key and hte Secret Key for S3 from your AWS IAM service. Alternatively, you can also create one using the SAP Object Store from the BTP Service and select AWS S3 standard plan. 
+
+## Snowflake
+
+You need a Snowflake account to do these excercises. You can also complete these with a trial account on Snowflake at the moment. You need admin rights on your account. We will do the following steps in the [Exercise 2 - Environment Setup - 2](../ex2/README.md)
+1. Create a database on a schema and remember these details. In our excercise we use the PUBLIC schema and a database name - TEST_DB.
+2. Also create an external stage using the [Snowflake docuemntation](https://docs.snowflake.com/en/user-guide/data-load-overview). In this example, we use AWS S3 bucket as an external stage. In Snowflake we created an Amazon S3 external stage by following [the steps describe here](https://docs.snowflake.com/en/user-guide/data-load-s3)
 
 After completing these steps you will have....
 
-1.	Click here.
-<br>![](/exercises/ex0/images/00_00_0010.png)
-
-2.	Insert this code.
-``` abap
- DATA(params) = request->get_form_fields(  ).
- READ TABLE params REFERENCE INTO DATA(param) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
-```
+1.  An account to use SAP IBP.
+2.  A Cloud Integration tenant access.
+3.  Stage to store bulk data either on Amazon S3, Microsoft Azure Blob store or Google's Big Query.
+4.  Snowflake account with a database ans well as an external stage configure. 
 
 ## Summary
 
-Now that you have ... 
-Continue to - [Exercise 1 - Exercise 1 Description](../ex1/README.md)
+After these pre-requisites are done, Continue to - [Exercise 1 - Environment Setup - 1](../ex1/README.md)

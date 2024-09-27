@@ -6,19 +6,26 @@ This repository contains the material for the SAP TechEd 2024 session IN280 - Us
 
 ## Overview
 
-This session introduces attendees to Non-SAP integration of SAP IBP through SAP Integration Suite
+This session introduces attendees to Non-SAP integration of SAP IBP through SAP Integration Suite. In this session we will be using Amazon AWS S3 and Snowflake as non-SAP cloud services.
+
+## Requirements
+
+The requirements to follow the exercises in this repository are:
+
+
+- [Getting Started](exercises/ex0/)
 
 ## Exercises
 
 Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
 
 - [Getting Started](exercises/ex0/)
-- [Exercise 1 - Environment Setup](exercises/ex1/)
+- [Exercise 1 - Environment Setup - 1](exercises/ex1/)
     - [Exercise 1.1 - Activate Communication Arrangement for communication scenario - SAP_COM_0931 in SAP IBP](exercises/ex1#exercise-11-sub-exercise-1-description)
     - [Exercise 1.2 - Activate RFC Destination in SAP BTP Cockpit](exercises/ex1#exercise-12-sub-exercise-2-description)
     - [Exercise 1.3 - Copy and Deploy SAP Cloud Integration Standard package "SAP IBP - Reusable Integration Flows"](exercises/ex1#exercise-13-sub-exercise-3-description)
     - [Exercise 1.4 - ](exercises/ex1#exercise-14-sub-exercise-4-description)
-- [Exercise 2 - Second Exercise Description](exercises/ex2/)
+- [Exercise 2 - Environment Setup - 2](exercises/ex2/)
     - [Exercise 2.1 - Exercise 2 Sub Exercise 1 Description](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 2.2 - Exercise 2 Sub Exercise 2 Description](exercises/ex2#exercise-22-sub-exercise-2-description)
 
