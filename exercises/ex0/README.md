@@ -10,10 +10,13 @@ Here is a list of requirements which you have to full fill before you start doin
 
 ## SAP Integration Suite
 
-1. You can create a user using the folowing link for the test SAP Cloud Integration tenant which can be used for this excercise.
+1. You can create a user using the [folowing link](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html) for the test SAP Cloud Integration tenant which can be used for this excercise. Use your s-user, d-user, i-user to create your user. If you forgot to note down urls, password and so on it is no problem at all- if you open the app again, you will get exactly the same data again!
+
+The system access for the participants will be open till 25.10.2024 EOB (Walldorf, Germany timezone).
+
 2. Remember your user ID, password as well as the oAuth credentails which you would need to trigger the iFlows from a HTTPs client such as Postman or Bruno.
 
-Remember:- you would not be able to access the BTP sub account for this test tenant. You have to use your own sub account to create destinations for your SAP IBP instance and communication setup. We will do the these steps in the [Exercise 1 - Environment Setup - 1](../ex1/README.md)
+Remember:- you would not be able to access the BTP sub account for this test tenant. You have to use your own sub account to create destinations for your SAP IBP instance and communication setup. We will do the these steps in the [Exercise 1 - Environment Setup - 1](../ex1/README.md). You can repeate these steps on your own SAP Cloud Integration tenant for which you have a BTP cockpit access.
 
 ## Staging data
 
@@ -36,8 +39,8 @@ After completing these steps you will have....
 4.  Snowflake account with a database ans well as an external stage configure. 
 
 ## Checklist
-1. SAP BTP Account
-2. SAP IBP Account with 
+1. SAP BTP account
+2. SAP IBP account with 
     - 2.1. permissions to manage communication setup
     - 2.2. SAP IBP Planning area with master data and keyfigure definitions
 3. SAP Object store or your own staging location based on the requirements from Snowflake

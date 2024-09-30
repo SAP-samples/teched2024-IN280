@@ -1,8 +1,26 @@
-# Exercise 2 - Exercise 2 Description
+# Exercise 2 - Environment Setup - 2
 
-In this exercise, we will create...
+In this exercise, we now set up the database tables and the staging configuration on the Snowflake side.
 
-## Exercise 2.1 Sub Exercise 1 Description
+## Exercise 2.1 Create table in Snowflake
+
+1. Login to you Snowflake account
+2. Click on Data -> Databases and then select your database and then the schema where you want your new table. Click on the Table and then select the warehouse which you want to use as your runtime. 
+3.	Click on the "Create" button on the top right corner, then select "Table" -> "Standard". You will get an SQL editor. You can use this below SQL statement as a reference.
+```sql
+create or replace TRANSIENT TABLE <Database>.<Schema>.<Table Name> (
+	PRODUCT VARCHAR(50),
+	CUSTOMER VARCHAR(50),
+	LOCATION VARCHAR(50),
+	CONSDEMAND NUMBER(38,0),
+	KEYFIGUREDATE DATE,
+	UNITS VARCHAR(4),
+	COMMENTS VARCHAR(100)
+);
+```
+4. Once you have decided on your SQl statment, then use tht "Create Table" button to run the SQL statment. This would then create your table in your database. 
+
+
 
 After completing these steps you will have created...
 
@@ -10,8 +28,16 @@ After completing these steps you will have created...
 <br>![](/exercises/ex2/images/02_01_0010.png)
 
 2.	Insert this line of code.
-```abap
-response->set_text( |Hello ABAP World! | ). 
+```sql
+create or replace TRANSIENT TABLE <Database>.<Schema>.<Table Name> (
+	PRODUCT VARCHAR(50),
+	CUSTOMER VARCHAR(50),
+	LOCATION VARCHAR(50),
+	CONSDEMAND NUMBER(38,0),
+	KEYFIGUREDATE DATE,
+	UNITS VARCHAR(4),
+	COMMENTS VARCHAR(100)
+);
 ```
 
 

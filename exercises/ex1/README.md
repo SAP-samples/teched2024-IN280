@@ -7,23 +7,29 @@ In this exercise, we will prepare the SAP IBP instance, the BTP destination as w
 1. Create a communication Arrangement for SAP_COM_0931
 2. Create a Communication Scenario
 3. Create or assign a Communication user for this scenario
- 
+
+<br>![](/exercises/ex1/images/01_01_0020.png)
+
+
 ## Exercise 1.2 Activate RFC Destination in SAP BTP Cockpit
 
-After completing these steps you will have...
+1. Open the SAP BTP Cockpit on your sub account.
+2. Click on Connectivity -> Destinations and then use the "Create Destination" link on the right hand side table bar to create a new destination configuration.
+3. Give it a name, Type is RFC, give it a description and then use the Proxy type as Internet if you are directly accessing it.
+4. Choose the authorization type as "Configured_user".
+5. Enter the communication user name you created in the previous step in the input field for "Alias user" and password in the respective text box as input.
+6. Configure these additional properties: 
 
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
+```java
+jco.client.serialization_format - columnBased
+jco.client.tls_trust_all        - 1
+jco.client.wshost               - name of your IBP host which you get while configuring the communication arrangement.
+jco.client.wsport               - 443 
 
 ```
- 
+Once you have done it, you can test the connection. The Destination configuration would then look like the following screen,
+<br>![](/exercises/ex1/images/01_01_0030.png)
+
 ## Exercise 1.3 Copy and Deploy SAP Cloud Integration Standard package "SAP IBP - Reusable Integration Flows" (OPTIONAL)
 
 Do this step only once if your own Cloud Integration tenant does not have this package deployed. If you are using any of SAP TechEd 2024 Cloud Integration tenants this step is already done - DO NOT DO THIS step.  You should do this only on your own SAP Cloud Integration tenant, if not done.
@@ -31,6 +37,7 @@ Do this step only once if your own Cloud Integration tenant does not have this p
 1. Go to the Home page of your SAP Integration Suite. Click on the "Discover" button and then "Integrations" on the left navigation pane.
 2. In the search Bar on the right, search for "SAP IBP Reusable"
 <br>![](/exercises/ex1/images/01_01_0010.png)
+
 3. If you see the "SAP IBP - Reusable Integration Flows", select it and then press the "Copy" button on the top right corner. This would import the package in your SAP Cloud Integration tenant. 
 
 ## Exercise 1.4 Copy and Deploy SAP Cloud Integration Session IN280 package
@@ -40,8 +47,9 @@ Do this step only once if your own Cloud Integration tenant does not have this p
 1. Go to the Home page of your SAP Integration Suite. Click on the "Design" button and then "Integrations and APIs" on the left navigation pane.
 2. Click on the "Create" Button on the top right to create a new Package with the name - "Session IN280 User XX"
 <br>![](/exercises/ex1/images/01_02_0010.png).
+
 3. Give it a short description, version and your name as vendor and press eht "Save" button on the top right corner. Click on the "Design" button and then "Integrations and APIs" on the left navigation pane. You should now see your package in the list of packages.
-4. Now, open the package Session In280 <User ID> and then select the Artifacts tab. You would see the two iFlows for this excercise. Use the Actions button to copy the iFlows into your own package (Select your package using the Select button) which you created in the previous step. Here is an example of how the iFlows were copied into the package [Session IN280 User 13](/exercises/ex1/images/01_03_0010.png). Repeat this step for both the iFlows.
+4. Download the package [Session In280](/artifacts/Session-IN280_User-ID_.zip) and then select the Artifacts tab. You would see the two iFlows for this excercise. Use the Actions button to copy the iFlows into your own package (Select your package using the Select button) which you created in the previous step. Here is an example of how the iFlows were copied into the package [Session IN280 User 13](/exercises/ex1/images/01_03_0010.png). Repeat this step for both the iFlows.
 <br>![](/exercises/ex1/images/01_03_0010.png)
 
 After completing these steps you will have created...
