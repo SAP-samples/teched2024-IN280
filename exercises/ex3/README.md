@@ -11,26 +11,26 @@ It would then store the data as a JSON file inside the Amazon S3 bucket which we
 ## Exercise 3.2 Configure the parameters for the Custom iFlow.
 
 | Parameter        | Example value  | Description |
-| :---             |     :---:      | :---          |
+| :---             | :---           | :---          |
 | AWSBucketName    | hcp-XXXXXX     | AWS Bucket ID    |
 | AWSAccessKeyName | AccessKey      | Secure parameter which stores the AWS access key  |
 | AWSDirectory     | data/sap/in    | AWS directory path in your bucket    |
 | AWSFile          | test.json      | AWS file name    |
 | AWSFileType      | application/json | File type      |
-| SFAddress        | org-account.snowflakecomputing.com    | URL of your Snwoflake instance    |
-| SFDatabase       | test_db        | Name of your Snwoflake database    |
-| SFSchema         | public         | Name of your Snwoflake Schema    |
-| SFWarehouse      | mywh           | Name of your Snwoflake warehouse    |
-| SFTable          | test_table     | Name of your Snwoflake Table    |
-| SFCredentials    | SnowFBasic     | Name of your Snwoflake secure parameter in CI    |
+| SFAddress        | org-account.sfcomputing.com    | URL of your Snowflake instance    |
+| SFDatabase       | test_db        | Name of your Snowflake database    |
+| SFSchema         | public         | Name of your Snowflake Schema    |
+| SFWarehouse      | mywh           | Name of your Snowflake warehouse    |
+| SFTable          | test_table     | Name of your Snowflake Table    |
+| SFCredentials    | SnowFBasic     | Name of your Snowflake secure parameter in CI    |
 | SFStageName      | test_stage     | Name of your external stage in Snowflake    |
 | IBPQuerySelect   | PRDID, CUSTID  | Attribute names to be selected from IBP's planning area    |
 | IBPQueryFilterString      | UOMTOID eq 'EA'    | Filter string for the RFC query    |
 | IBPFields        | PRDID, CUSTID  | Attribute fields to be mapped from IBP    |
 | IBPQueryOrderBy  | PRDID, CUSTID  | Orderby criteria    |
-| IBPDestination   | TECHED24_IBP   | Name of your IBP destination in BTP  |
+| IBPDestination   | TECD24_IBP     | Name of your IBP destination in BTP  |
 | IBPQueryTypeOfData   | KeyFigures | KeyFigures to be selected in BTP  |
-| IBPBatchKey      | TECHED24_IBP   | Name of batch key - can be any string  |
+| IBPBatchKey      | UserXXKey   | Name of batch key - can be any string  |
 | IBPPackageSizeInRows   | 100000   | Max rows to be selected in one batch  |
 | IBPQueryTimeAggregationLevel  | 3 | Time profile aggregation level |
 | IBPQueryOffset1  | 0              | Offset, typically 0  |
