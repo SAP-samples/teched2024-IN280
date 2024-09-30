@@ -19,50 +19,34 @@ create or replace TRANSIENT TABLE <Database>.<Schema>.<Table Name> (
 );
 ```
 4. Once you have decided on your SQl statment, then use tht "Create Table" button to run the SQL statment. This would then create your table in your database. 
-
-
-
-After completing these steps you will have created...
-
-1. Click here.
-<br>![](/exercises/ex2/images/02_01_0010.png)
-
-2.	Insert this line of code.
-```sql
-create or replace TRANSIENT TABLE <Database>.<Schema>.<Table Name> (
-	PRODUCT VARCHAR(50),
-	CUSTOMER VARCHAR(50),
-	LOCATION VARCHAR(50),
-	CONSDEMAND NUMBER(38,0),
-	KEYFIGUREDATE DATE,
-	UNITS VARCHAR(4),
-	COMMENTS VARCHAR(100)
-);
-```
-
-
-
-## Exercise 2.2 Sub Exercise 2 Description
-
-After completing these steps you will have...
-
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc = 0.
-    response->set_status( i_code = 200
-                     i_reason = 'Everything is fine').
-    RETURN.
-  ENDIF.
-
-```
-
-2.	Click here.
 <br>![](/exercises/ex2/images/02_02_0010.png)
+ 
+
+## Exercise 2.2 Create external stage using AWS S3
+
+You are free to choose any bulk loading mechanisim defined by Snowflake. In this excercise, we use the Amazon S3 as an external staging area. In this step we configure an external stage on Snowflake.
+
+1.	In your Snowflake account, Click on Data -> Databases and then select your database and then the schema where you want your new stage.  
+2.	Click on the "Create" button on the top right corner, then select "Stage" -> "External Stage -> Amazon S3". The Screen would look like below,
+
+<br>![](/exercises/ex2/images/02_02_0020.png)
+
+3.	Give the stage a name, enter your Amazon S3 URL.
+4.  Select the Authentication switch to ON.
+5.  Enter your AWS Key and then AWS Secret. Press "Create" button to create the external stage.
+<br>![](/exercises/ex2/images/02_02_0030.png)
+
+You can use this below SQL statement as a reference.
+```sql
+CREATE STAGE <Stage name> 
+	URL = 's3://AWS KEY : AWS Secrect @s3-eu-central-1.amazonaws.com/AWS Bucket ID' 
+	CREDENTIALS = ( AWS_KEY_ID = 'AWS KEY' AWS_SECRET_KEY = '*****' ) 
+	DIRECTORY = ( ENABLE = true )
+```
+
 
 ## Summary
 
-You've now ...
+In this excercise, you have create a table and set up an external stage on Snowflake to import data. You can also consider a directory name and a file name for test purposes This could be the place inside Amason S3 bucket to stage your data from SAP IBP.
 
-Continue to - [Exercise 3 - Excercise 3 ](../ex3/README.md)
+In the next step we will work with the iFlow to read data from SAP IBP and then store it on the above stage and then copy it to the table we created. Click here to continue - [Exercise 3 - Reading from SAP IBP and Writing to Snowflake ](../ex3/README.md)
