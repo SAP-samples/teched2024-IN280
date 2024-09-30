@@ -17,7 +17,7 @@ The requirements to follow the exercises in this repository are:
 
 ## Exercises
 
-Provide the exercise content here directly in README.md using [markdown](https://guides.github.com/features/mastering-markdown/) and linking to the specific exercise pages, below is an example.
+The integration between SAP IBP and 3rd party systems such as Amazon S3 or Snowflake uses SAP Cloud Integration as a widdleware. The below steps outline a basic setup which can be excercised to exchange data between SAP IBP and Snowflake using Amazon S3 as a staging section. Participants are requested to read thru the steps and follow them on their own SAP cloud instances. 
 
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Environment Setup - 1](exercises/ex1/)
@@ -28,10 +28,22 @@ Provide the exercise content here directly in README.md using [markdown](https:/
 - [Exercise 2 - Environment Setup - 2](exercises/ex2/)
     - [Exercise 2.1 - Create table in Snowflake](exercises/ex2#exercise-21-sub-exercise-1-description)
     - [Exercise 2.2 - Create external Stage using AWS S3](exercises/ex2#exercise-22-sub-exercise-2-description) 
+- [Exercise 3 - Reading from SAP IBP and Writing to Snowflake](exercises/ex3/)
+    - [Exercise 3.1 - Overview](exercises/ex3#Overview)
+    - [Exercise 3.2 - Input parameters](exercises/ex3#Input)
+    - [Exercise 3.3 - Mapping](exercises/ex3#Mapping)
+    - [Exercise 3.4 - Staging](exercises/ex3#Staging)
+    - [Exercise 3.5 - Copying](exercises/ex3#Copying)
+- [Exercise 4 - Reading from Snowflake and Writing to SAP IBP](exercises/ex4/)
+    - [Exercise 4.1 - Overview](exercises/ex4#Overview)
+    - [Exercise 4.2 - Input parameters](exercises/ex4#Input)
+    - [Exercise 4.3 - Mapping](exercises/ex4#Mapping)
+    - [Exercise 4.4 - IBP Processes](exercises/ex4#IBP-Processes)
+- [Exercise 5 - Conclusion](exercises/ex5/) 
 
 **IMPORTANT**
 
-Your repo must contain the .reuse and LICENSES folder and the License section below. DO NOT REMOVE the section or folders/files. Also, remove all unused template assets(images, folders, etc) from the exercises folder. 
+These steps are intended to be a guide for learning purposes only. The setup might change based on your instance configuration or IT landscape.  
 
 ## Contributing
 Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
