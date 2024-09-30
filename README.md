@@ -8,6 +8,8 @@ This repository contains the material for the SAP TechEd 2024 session IN280 - Us
 
 This session introduces attendees to Non-SAP integration of SAP IBP through SAP Integration Suite. In this session we will be using Amazon AWS S3 and Snowflake as non-SAP cloud services.
 
+<br>![](/exercises/ex0/images/00_00_0010.png)
+
 ## Requirements
 
 The requirements to follow the exercises in this repository are:

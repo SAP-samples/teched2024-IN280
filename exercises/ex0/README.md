@@ -17,7 +17,7 @@ Remember:- you would not be able to access the BTP sub account for this test ten
 
 ## Staging data
 
-Snowflake refers to the location of data files in a cloud storage as a stage. We need to use stages to load bulk data into Snwoflake. [Overview of data loading](https://docs.snowflake.com/en/user-guide/data-load-overview) gives you an idea of different options you have to create these external stages.
+Snowflake refers to the location of data files in a cloud storage as a stage. We need to use stages to load bulk data into Snowflake. [Overview of data loading](https://docs.snowflake.com/en/user-guide/data-load-overview) gives you an idea of different options you have to create these external stages.
 
 1. You need an account on one of the following Hyperscalers :- Amazon Web Services or Microsoft Azure or Google Cloud Platform for storing data. In case of Amazon Web Services - use S3 as a storage. On Microsoft Azure - use Azure Blob store and on Google Cloud Platform use Big Query as your store. 
 2. Make sure you store the oAuth credentails for these. In this example, we will be using AWS S3 buckets as a staging location. Hence you would need the S3 Bucket ID, your Access Key and hte Secret Key for S3 from your AWS IAM service. Alternatively, you can also create one using the SAP Object Store from the BTP Service and select AWS S3 standard plan. 
