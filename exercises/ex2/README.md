@@ -20,6 +20,10 @@ create or replace TRANSIENT TABLE <Database>.<Schema>.<Table Name> (
 ```
 4. Once you have decided on your SQl statment, then use tht "Create Table" button to run the SQL statment. This would then create your table in your database. 
 <br>![](/exercises/ex2/images/02_02_0010.png)
+
+5.  Go to the Home screen of SAP Cloud Integration. Click on "Monitor" and then "Integrations and API". Select the tile called "Security Material". 
+6.  Select the Runtime as "All" on the top of the right pane. Then use the "Create" drop down menu and select "User Credentials".
+7.  Create a credentials for storing the Snowflake basic authentication details. Remember this name.
  
 
 ## Exercise 2.2 Create external stage using AWS S3
@@ -43,6 +47,9 @@ CREATE STAGE <Stage name>
 	CREDENTIALS = ( AWS_KEY_ID = 'AWS KEY' AWS_SECRET_KEY = '*****' ) 
 	DIRECTORY = ( ENABLE = true )
 ```
+6.  Go to the Home screen of SAP Cloud Integration. Click on "Monitor" and then "Integrations and API". Select the tile called "Security Material". 
+7.  Select the Runtime as "All" on the top of the right pane. Then use the "Create" drop down menu and select "Secure Parameter".
+8.  Create two secure parameters, one for storing the AWS Access Key and the other for the AWS Secret key. Remember these parameter names.
 
 
 ## Summary
