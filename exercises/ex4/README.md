@@ -1,7 +1,7 @@
 # Exercise 4 - Reading from Snowflake and writing it to SAP IBP
 
 Once the pre-requisites are completed, we can now start to read data from SAP IBP. At a high level, the end to end flow would look like this,
-<br>![](/exercises/ex3/images/04_01_0010.png)
+<br>![](/exercises/ex4/images/04_01_0010.png)
 
 ## Exercise 3.1 Overview
 The package you just created contains 2 iflows. One is for exporting data from SAP IBP into Snowflake. For this purposes, we have the "<i>Read from IBP and write Snowflake</i>" iFlow. This is a custom iFlow. It receives the parameters from an external trigger or via the configurable screen. It uses the standard reusable iflows from SAP to extract data. It communicates with SAP IBP using Websocket RFC calls using the destination we have defined in BTP Cockpit. Reading data from IBp is done in an asynchronous way. First a batch is create, then the fetch query is executed. When the data is prepared by the backend, then the tech status is changed. On this change, data is then fetched, mapped and then written to the staging location. It would then store the data as a JSON file inside the Amazon S3 bucket which we configured with secure parameters in SAP Cloud Integration. It would also use the Snowflake credentails to execute the copy statements from the external staging location into the database table in Snowflake.  
