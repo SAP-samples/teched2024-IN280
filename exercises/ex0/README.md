@@ -35,6 +35,18 @@ After completing these steps you will have....
 3.  Stage to store bulk data either on Amazon S3, Microsoft Azure Blob store or Google's Big Query.
 4.  Snowflake account with a database ans well as an external stage configure. 
 
+## Checklist
+1. SAP BTP Account
+2. SAP IBP Account with 
+    - 2.1. permissions to manage communication setup
+    - 2.2. SAP IBP Planning area with master data and keyfigure definitions
+3. SAP Object store or your own staging location based on the requirements from Snowflake
+4. Permissions on SAP BTP to create your destinations.
+5. SAP Cloud Integration tenant with permissions to create Secure parameters and edit iFlows
+6. Snowflake account with 
+    - 6.1. roles to create tables, stages and monitor queries.
+    - 6.2. warehouse to use Snowflake database
+
 ## Summary
 
 After these pre-requisites are done, Continue to - [Exercise 1 - Environment Setup - 1](../ex1/README.md)
