@@ -10,13 +10,13 @@ Here is a list of requirements which you have to full fill before you start doin
 
 ## SAP Integration Suite
 
-1. You can create a user using the [folowing link](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html) for the test SAP Cloud Integration tenant which can be used for this excercise. Use your s-user, d-user, i-user to create your user. If you forgot to note down urls, password and so on it is no problem at all- if you open the app again, you will get exactly the same data again!
+1. You can create a user using the [folowing link](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html) for the test SAP Cloud Integration tenant which can be used for this excercise. Use your s-user, d-user, i-user to create your user. If you forgot to note down urls, password and so on it is no problem at all- if you re-open the app, you will get the same data again!
 
 The system access for the participants will be open till 25.10.2024 EOB (Walldorf, Germany timezone).
 
 2. Remember your user ID, password as well as the oAuth credentails which you would need to trigger the iFlows from a HTTPs client such as Postman or Bruno.
 
-Remember:- you would not be able to access the BTP sub account for this test tenant. You have to use your own sub account to create destinations for your SAP IBP instance and communication setup. We will do the these steps in the [Exercise 1 - Environment Setup - 1](../ex1/README.md). You can repeate these steps on your own SAP Cloud Integration tenant for which you have a BTP cockpit access.
+<b>Remember</b>:- you would not be able to access the BTP sub account for this test tenant. You have to use your own sub account to create destinations for your SAP IBP instance and communication setup. We will do the these steps in the [Exercise 1 - Environment Setup - 1](../ex1/README.md). You can repeate these steps on your own SAP Cloud Integration tenant for which you have a BTP cockpit access.
 
 ## Staging data
 

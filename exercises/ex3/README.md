@@ -4,7 +4,7 @@ Once the pre-requisites are completed, we can now start to read data from SAP IB
 <br>![](/exercises/ex3/images/03_01_0010.png)
 
 ## Exercise 3.1 Overview
-The package you just created contains 2 iflows. One is for exporting data from SAP IBP into Snowflake. For this purposes, we have the "<i>Read from IBP and write Snowflake</i>" iFlow. This is a custom iFlow. It receives the parameters from an external trigger or via the configurable screen. It uses the standard reusable iflows from SAP to extract data. It communicates with SAP IBP using Websocket RFC calls using the destination we have defined in BTP Cockpit. Reading data from IBP is done in an asynchronous way. First a batch is create, then the fetch query is executed. When the data is prepared by the backend, then the tech status is changed. On this change, data is then fetched, mapped and then written to the staging location. It would then store the data as a JSON file inside the Amazon S3 bucket which we configured with secure parameters in SAP Cloud Integration. It would also use the Snowflake credentails to execute the copy statements from the external staging location into the database table in Snowflake.  
+The package you just created contains 2 iflows. One is for exporting data from SAP IBP into Snowflake. For this purposes, we have the "<i>Read from IBP and write Snowflake</i>" iFlow. This is a custom iFlow. It receives the parameters from an external trigger or via the configurable screen. It uses the standard reusable iflows from SAP to extract data. It communicates with SAP IBP using Websocket RFC calls using the destination we have defined in BTP Cockpit. Reading data from IBP is done in an asynchronous way. First a batch is create, then the fetch query is executed. When the data is prepared by the backend, then a fech status is changed. On this change, data is then fetched, mapped and then written to the staging location. It would then store the data as a JSON file inside the Amazon S3 bucket which we configured with secure parameters in SAP Cloud Integration. It would also use the Snowflake credentails to execute the copy statements from the external staging location into the database table in Snowflake.  
 
 ## Exercise 3.2 Configure the parameters for the Custom iFlow.
 For the flow to work we need the following configuration, which can be sent as a JSON payload or configured via the User Interface in the iFlow.
@@ -63,14 +63,13 @@ Once data is read from SAP IBP, it has to be mapped to the database table struct
             
             def root = builder ibp_data
         	
-        	def prettyBody = builder.toPrettyString();
-    	    long len = prettyBody.getBytes().length; 
-        	String payloadSize = len.toString(); 
+            def prettyBody = builder.toPrettyString();
+            long len = prettyBody.getBytes().length; 
+            String payloadSize = len.toString(); 
         	
-        	// CLEAR and SET HTTP HEaders 
-        	message.setHeader("Content-Length", payloadSize);         	
-        	message.setBody(prettyBody);
-        	
+            // CLEAR and SET HTTP HEaders 
+            message.setHeader("Content-Length", payloadSize);         	
+            message.setBody(prettyBody);        	
         }
 ```
 
@@ -82,7 +81,7 @@ In this excercise, staging the data is done via a local process. Here the Reques
 
 
 ## Exercise 3.5 Copying.
-To execute the copy statement, we ned the request-reply-receiver combination. We consider the Snowflake adapter as the adapter type. The configuration of this adapter is as follows:
+To execute the copy statement, we need the request-reply-receiver combination. We consider the Snowflake adapter as the adapter type. The configuration of this adapter is as follows:
 
 ### Connection
 

@@ -28,7 +28,7 @@ create or replace TRANSIENT TABLE <Database>.<Schema>.<Table Name> (
 
 ## Exercise 2.2 Create external stage using AWS S3
 
-You are free to choose any bulk loading mechanisim defined by Snowflake. In this excercise, we use the Amazon S3 as an external staging area. In this step we configure an external stage on Snowflake.
+You are free to choose any bulk loading mechanisim [defined by Snowflake](https://docs.snowflake.com/en/user-guide/data-load-overview). In this excercise, we use the [Amazon S3 as an external staging area](https://docs.snowflake.com/en/user-guide/data-load-s3). In this step we configure an external stage on Snowflake.
 
 1.	In your Snowflake account, Click on Data -> Databases and then select your database and then the schema where you want your new stage.  
 2.	Click on the "Create" button on the top right corner, then select "Stage" -> "External Stage -> Amazon S3". The Screen would look like below,

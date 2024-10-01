@@ -29,7 +29,7 @@ For the flow to work we need the following configuration, which can be sent as a
 To execute the select statement on Snowflake, we ned the request-reply-receiver combination. We consider the Snowflake adapter as the adapter type. The configuration of this adapter is as follows:
 
 ### Connection
-The following details would establish the connection betweeen SAP Cloud Integration and Snwoflake database directly.
+The following details would establish the connection betweeen SAP Cloud Integration and Snowflake database directly.
 
 | Parameter        | Example value  | Description |
 | :---             | :---           | :---          |
@@ -74,7 +74,7 @@ Once data is read from Snowflake, it may be be mapped to the key figure definiti
     	</multimap:Messages>
 ```
 
-In the above snippet you can see that PRODUCT, CUSTOMER, LOCATION, UNITS, CONSDEMAND, KEYFIGUREDATE values are mapped to  PRDID; CUTID, LOCID, UOMID, STATISTICALFORECASTQTY and KEYFIGUREDATE from  column names of the Snowflake database table are mapped to the key figure attributes of STATISTICALFORECASTQTY in SAP IBP.
+In the above snippet you can see that values from PRODUCT, CUSTOMER, LOCATION, CONSDEMAND and KEYFIGUREDATE column names of the Snowflake database table are mapped to the key figure attributes of STATISTICALFORECASTQTY in SAP IBP.
  
 ## Summary
 

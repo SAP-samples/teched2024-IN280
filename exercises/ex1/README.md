@@ -50,7 +50,9 @@ Do this step only once if your own Cloud Integration tenant does not have this p
 
 3. Give it a short description, version and your name as vendor and press the "Save" button on the top right corner. Click on the "Design" button and then "Integrations and APIs" on the left navigation pane. You should now see your package in the list of packages.
 4. Download the package [Session IN280](/artifacts/Session-IN280.zip), unzip only this file on your local computer. You must see two ZIP files, do not extract them.
-5. Go back to the SAP Cloud Integration, open your package you just created in Step 3 and then select the Artifacts tab. Click Edit and then click on the "Add" drop down button and then select "Integration Flow". Select the Upload check box and browse to select the "Read from IBP and write Snowflake.zip" file from the extracted folder in Step 4. Rename the flow as "UXX Read from IBP and write Snowflake" where XX is your user ID (for example:- U13 Read from IBP and write Snowflake). Repeat this to upload the other iFlow too. The Add Integration Flow pop up window would look like this: [Session IN280 User 13](/exercises/ex1/images/01_04_0010.png). Repeat this step for both the iFlows. 
+5. Go back to the SAP Cloud Integration, open your package you just created in Step 3 and then select the Artifacts tab. Click Edit and then click on the "Add" drop down button and then select "Integration Flow". Select the Upload check box and browse to select the "Read from IBP and write Snowflake.zip" file from the extracted folder in Step 4. Rename the flow as "UXX Read from IBP and write Snowflake" where XX is your user ID (for example:- U13 Read from IBP and write Snowflake). Repeat this to upload the other iFlow too. The Add Integration Flow pop up window would look like this: 
+<br>[Session IN280 User 13](/exercises/ex1/images/01_04_0010.png). 
+Repeat this step for both the iFlows. 
 
 After completing these steps you will have created...
 

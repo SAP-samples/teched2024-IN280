@@ -6,7 +6,7 @@ This repository contains the material for the SAP TechEd 2024 session IN280 - Us
 
 ## Overview
 
-This session introduces attendees to Non-SAP integration of SAP IBP through SAP Integration Suite. In this session we will be using Amazon AWS S3 and Snowflake as non-SAP cloud services.
+This session is aimied to help participants to use SAP Integration Suite as a middleware for integrating SAP IBP and non-SAP cloud technologies. In this session we will be using Amazon AWS S3 and Snowflake as non-SAP cloud services.
 
 <br>![](/exercises/ex0/images/00_00_0010.png)
 
@@ -19,7 +19,7 @@ The requirements to follow the exercises in this repository are:
 
 ## Exercises
 
-The integration between SAP IBP and 3rd party systems such as Amazon S3 or Snowflake uses SAP Cloud Integration as a widdleware. The below steps outline a basic setup which can be excercised to exchange data between SAP IBP and Snowflake using Amazon S3 as a staging section. Participants are requested to read thru the steps and follow them on their own SAP cloud instances. 
+The integration between SAP IBP and 3rd party systems such as Amazon S3 or Snowflake uses SAP Cloud Integration as a middleware. The below steps outline basic setups which can be excercised to exchange data between SAP IBP and Snowflake using Amazon S3 bucket as a staging section. Participants are requested to read thru the steps and follow them on their own SAP cloud instances. 
 
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Environment Setup - 1](exercises/ex1/)
@@ -32,7 +32,7 @@ The integration between SAP IBP and 3rd party systems such as Amazon S3 or Snowf
     - [Exercise 2.2 - Create external Stage using AWS S3](exercises/ex2#exercise-22-sub-exercise-2-description) 
 - [Exercise 3 - Reading from SAP IBP and Writing to Snowflake](exercises/ex3/)
     - [Exercise 3.1 - Overview](exercises/ex3#Overview)
-    - [Exercise 3.2 - Input parameters](exercises/ex3#Input)
+    - [Exercise 3.2 - Configure the parameters](exercises/ex3#Input)
     - [Exercise 3.3 - Mapping](exercises/ex3#Mapping)
     - [Exercise 3.4 - Staging](exercises/ex3#Staging)
     - [Exercise 3.5 - Copying](exercises/ex3#Copying)
