@@ -18,12 +18,12 @@ create or replace TRANSIENT TABLE <Database>.<Schema>.<Table Name> (
 	COMMENTS VARCHAR(100)
 );
 ```
-4. Once you have decided on your SQl statment, then use tht "Create Table" button to run the SQL statment. This would then create your table in your database. 
+4. Once you have decided on your SQl statment, then use the "<b>Create Table</b>" button to run the SQL statment. This would then create your table in your database. 
 <br>![](/exercises/ex2/images/02_02_0010.png)
 
-5.  Go to the Home screen of SAP Cloud Integration. Click on "Monitor" and then "Integrations and API". Select the tile called "Security Material". 
-6.  Select the Runtime as "All" on the top of the right pane. Then use the "Create" drop down menu and select "User Credentials".
-7.  Create a credentials for storing the Snowflake basic authentication details. Remember this name.
+5.  Go to the Home screen of SAP Cloud Integration. Click on "<b>Monitor</b>" and then "<b>Integrations and APIs</b>". Select the tile called "<b>Security Material</b>". 
+6.  Select the Runtime as "<b>All</b>" on the top of the right pane. Then use the "<b>Create</b>" drop down menu and select "<b>User Credentials</b>".
+7.  Create a credential alias for storing the <b>Snowflake basic authentication</b> details. Note this name.
  
 
 ## Exercise 2.2 Create external stage using AWS S3
@@ -31,25 +31,24 @@ create or replace TRANSIENT TABLE <Database>.<Schema>.<Table Name> (
 You are free to choose any bulk loading mechanisim [defined by Snowflake](https://docs.snowflake.com/en/user-guide/data-load-overview). In this excercise, we use the [Amazon S3 as an external staging area](https://docs.snowflake.com/en/user-guide/data-load-s3). In this step we configure an external stage on Snowflake.
 
 1.	In your Snowflake account, Click on Data -> Databases and then select your database and then the schema where you want your new stage.  
-2.	Click on the "Create" button on the top right corner, then select "Stage" -> "External Stage -> Amazon S3". The Screen would look like below,
-
+2.	Click on the "Create" button on the top right corner, then select "<b>Stage</b>" -> "<b>External Stage -> Amazon S3</b>". The Screen would look like below,
 <br>![](/exercises/ex2/images/02_02_0020.png)
 
 3.	Give the stage a name, enter your Amazon S3 URL.
 4.  Select the Authentication switch to ON.
-5.  Enter your AWS Key and then AWS Secret. Press "Create" button to create the external stage.
+5.  Enter your AWS Key and then AWS Secret. Press "<b>Create</b>" button to create the external stage.
 <br>![](/exercises/ex2/images/02_02_0030.png)
 
 You can use this below SQL statement as a reference.
 ```sql
 CREATE STAGE <Stage name> 
-	URL = 's3://AWS KEY : AWS Secrect @s3-eu-central-1.amazonaws.com/AWS Bucket ID' 
+	URL = 's3://AWS KEY : AWS Secret @s3-eu-central-1.amazonaws.com/AWS Bucket ID' 
 	CREDENTIALS = ( AWS_KEY_ID = 'AWS KEY' AWS_SECRET_KEY = '*****' ) 
 	DIRECTORY = ( ENABLE = true )
 ```
-6.  Go to the Home screen of SAP Cloud Integration. Click on "Monitor" and then "Integrations and API". Select the tile called "Security Material". 
-7.  Select the Runtime as "All" on the top of the right pane. Then use the "Create" drop down menu and select "Secure Parameter".
-8.  Create two secure parameters, one for storing the AWS Access Key and the other for the AWS Secret key. Remember these parameter names.
+6.  Go to the Home screen of SAP Cloud Integration. Click on "<b>Monitor</b>" and then "<b>Integrations and APIs</b>". Select the tile called "<b>Security Material</b>". 
+7.  Select the Runtime as "<b>All</b>" on the top of the right pane. Then use the "<b>Create</b>" drop down menu and select "<b>Secure Parameter</b>".
+8.  Create two secure parameters, one for storing the <b>AWS Access Key</b> and the other for the <b>AWS Secret key</b>. Note these parameter names.
 
 
 ## Summary
