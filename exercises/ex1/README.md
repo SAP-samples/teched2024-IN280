@@ -42,22 +42,22 @@ Do this step only once if your own Cloud Integration tenant does not have this p
 
 ## Exercise 1.4 Copy and Deploy SAP Cloud Integration Session IN280 package
 
-<b>IMPORTANT</b>:- Create a package for your user like this - Session IN280 User XX. For example:- <b>Session IN280 User 13</b>
+<b>IMPORTANT</b>:- Create a package for your user like this - Session IN280 User XX. For example:- <b>SIN280 User 13</b>
 
 1. Go to the Home page of your SAP Integration Suite. Click on the "Design" button and then "Integrations and APIs" on the left navigation pane.
-2. Click on the "Create" Button on the top right to create a new Package with the name - "Session IN280 User XX"
+2. Click on the "Create" Button on the top right to create a new Package with the name - "SIN280 User XX"
 <br>![](/exercises/ex1/images/01_02_0010.png).
 
-3. Give it a short description, version and your name as vendor and press eht "Save" button on the top right corner. Click on the "Design" button and then "Integrations and APIs" on the left navigation pane. You should now see your package in the list of packages.
-4. Download the package [Session In280](/artifacts/Session-IN280_User-ID_.zip) and then select the Artifacts tab. You would see the two iFlows for this excercise. Use the Actions button to copy the iFlows into your own package (Select your package using the Select button) which you created in the previous step. Here is an example of how the iFlows were copied into the package [Session IN280 User 13](/exercises/ex1/images/01_03_0010.png). Repeat this step for both the iFlows.
-<br>![](/exercises/ex1/images/01_03_0010.png)
+3. Give it a short description, version and your name as vendor and press the "Save" button on the top right corner. Click on the "Design" button and then "Integrations and APIs" on the left navigation pane. You should now see your package in the list of packages.
+4. Download the package [Session IN280](/artifacts/Session-IN280.zip), unzip only this file on your local computer. You must see two ZIP files, do not extract them.
+5. Go back to the SAP Cloud Integration, open your package you just created in Step 3 and then select the Artifacts tab. Click Edit and then click on the "Add" drop down button and then select "Integration Flow". Select the Upload check box and browse to select the "Read from IBP and write Snowflake.zip" file from the extracted folder in Step 4. Rename the flow as "UXX Read from IBP and write Snowflake" where XX is your user ID (for example:- U13 Read from IBP and write Snowflake). Repeat this to upload the other iFlow too. The Add Integration Flow pop up window would look like this: [Session IN280 User 13](/exercises/ex1/images/01_04_0010.png). Repeat this step for both the iFlows. 
 
 After completing these steps you will have created...
 
 1.  A Communication Setup in SAP IBP 
 2.	Active RFC destination on your BTP Account
 3.  Deployed the reusable iflows from SAP IBP
-4.  Copied the Sample contents which was provided for Session IN280.
+4.  Created you own package and copied the Sample contents which was provided for Session IN280.
  
 ## Summary
 

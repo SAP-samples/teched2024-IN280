@@ -4,7 +4,7 @@ Once the pre-requisites are completed, we can now start to read data from SAP IB
 <br>![](/exercises/ex3/images/03_01_0010.png)
 
 ## Exercise 3.1 Overview
-The package you just created contains 2 iflows. One is for exporting data from SAP IBP into Snowflake. For this purposes, we have the "<i>Read from IBP and write Snowflake</i>" iFlow. This is a custom iFlow. It receives the parameters from an external trigger or via the configurable screen. It uses the standard reusable iflows from SAP to extract data. It communicates with SAP IBP using Websocket RFC calls using the destination we have defined in BTP Cockpit. Reading data from IBp is done in an asynchronous way. First a batch is create, then the fetch query is executed. When the data is prepared by the backend, then the tech status is changed. On this change, data is then fetched, mapped and then written to the staging location. It would then store the data as a JSON file inside the Amazon S3 bucket which we configured with secure parameters in SAP Cloud Integration. It would also use the Snowflake credentails to execute the copy statements from the external staging location into the database table in Snowflake.  
+The package you just created contains 2 iflows. One is for exporting data from SAP IBP into Snowflake. For this purposes, we have the "<i>Read from IBP and write Snowflake</i>" iFlow. This is a custom iFlow. It receives the parameters from an external trigger or via the configurable screen. It uses the standard reusable iflows from SAP to extract data. It communicates with SAP IBP using Websocket RFC calls using the destination we have defined in BTP Cockpit. Reading data from IBP is done in an asynchronous way. First a batch is create, then the fetch query is executed. When the data is prepared by the backend, then the tech status is changed. On this change, data is then fetched, mapped and then written to the staging location. It would then store the data as a JSON file inside the Amazon S3 bucket which we configured with secure parameters in SAP Cloud Integration. It would also use the Snowflake credentails to execute the copy statements from the external staging location into the database table in Snowflake.  
 
 ## Exercise 3.2 Configure the parameters for the Custom iFlow.
 For the flow to work we need the following configuration, which can be sent as a JSON payload or configured via the User Interface in the iFlow.
@@ -36,7 +36,7 @@ For the flow to work we need the following configuration, which can be sent as a
 
 
 ## Exercise 3.3 Mapping.
-Once data is read from SAP IBP, it has ot be mapped to the database table structure of Snowflake. In the FETCH and WRITE local sub process, there is a step "MAP IBP to SF". It contains a groovy script to map the source and the target. One can change this to adapt the payload from SAP IBP to the database structure in Snowflake. Amazon S3 bucket is completly agnostic to this payload.
+Once data is read from SAP IBP, it has to be mapped to the database table structure of Snowflake. In the FETCH and WRITE local sub process, there is a step "MAP IBP to SF". It contains a groovy script to map the source and the target. One can change this to adapt the payload from SAP IBP to the database structure in Snowflake. Amazon S3 bucket is completly agnostic to this payload.
 ```groovy
  try{
         JSONArray results_array = new JSONArray();  
@@ -74,7 +74,7 @@ Once data is read from SAP IBP, it has ot be mapped to the database table struct
         }
 ```
 
-In the above snippet you can see that PRDID; CUTID, LOCID, UOMID, ACTUALSQTY and TSTFR from IBP are mapped to PRODUCT, CUSTOMER, LOCATION, UNITS, CONSDEMAND, KEYFIGUREDATA column names of the Snowflake database table.
+In the above snippet you can see that PRDID; CUTID, LOCID, UOMID, ACTUALSQTY and TSTFR from IBP are mapped to PRODUCT, CUSTOMER, LOCATION, UNITS, CONSDEMAND, KEYFIGUREDATE column names of the Snowflake database table.
 
 ## Exercise 3.4 Staging.
 In this excercise, staging the data is done via a local process. Here the Request-Reply-receiver combination is used. The Amazon AWS adapter for S3 message protocol is used. Bucket name is reused from the configuration parameter. The Secure parameter alias name for AWS Access key and the Secret key are reused here for the adapter configuration. In the Procesing tab, the Directory and File name are used as File Access parameters. 
