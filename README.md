@@ -6,7 +6,7 @@ This repository contains the material for the SAP TechEd 2024 session IN280 - Us
 
 ## Overview
 
-This session is aimied to help participants to use SAP Integration Suite as a middleware for integrating SAP IBP and non-SAP cloud technologies. In this session we will be using Amazon AWS S3 and Snowflake as non-SAP cloud services.
+This session is aimied to help participants to use SAP Integration Suite as a middleware for integrating SAP IBP and non-SAP cloud technologies. In this session we will be using Amazon AWS S3 and Snowflake as non-SAP cloud services / third-party systems.
 
 <br>![](/exercises/ex0/images/00_00_0010.png)
 
@@ -19,7 +19,7 @@ The requirements to follow the exercises in this repository are:
 
 ## Exercises
 
-The integration between SAP IBP and 3rd party systems such as Amazon S3 or Snowflake uses SAP Cloud Integration as a middleware. The below steps outline basic setups which can be excercised to exchange data between SAP IBP and Snowflake using Amazon S3 bucket as a staging section. Participants are requested to read thru the steps and follow them on their own SAP cloud instances. 
+The integration between SAP IBP and 3rd party systems such as Amazon S3 or Snowflake uses SAP Cloud Integration as a middleware. The below steps outline basic setups which can be excercised to exchange data between SAP IBP and Snowflake using Amazon S3 bucket as a external staging(especially for large datasets). Participants are requested to read through the steps and follow them on their own SAP cloud instances. 
 
 - [Getting Started](exercises/ex0/)
 - [Exercise 1 - Environment Setup - 1](exercises/ex1/)
