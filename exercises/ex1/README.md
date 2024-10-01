@@ -4,10 +4,10 @@ In this exercise, we will prepare the SAP IBP instance, the BTP destination as w
 
 ## Exercise 1.1 Activate Communication Arrangement for communication scenario - SAP_COM_0931 in SAP IBP
 
-1. Create a communication Arrangement for SAP_COM_0931
-2. Create a Communication Scenario
-3. Create or assign a Communication user for this scenario
-
+1. Create a Communication user
+2. Create a Communication System using the created communication user(1) for inbound communication only
+3. Create a Communication Arrangement for the Communication Scenario <b>SAP_COM_0931</b> from the created communication system(2)
+   
 <br>![](/exercises/ex1/images/01_01_0020.png)
 
 
@@ -32,13 +32,16 @@ Once you have done it, you can test the connection. The Destination configuratio
 
 ## Exercise 1.3 Copy and Deploy SAP Cloud Integration Standard package "SAP IBP - Reusable Integration Flows" (OPTIONAL)
 
-Do this step only once if your own Cloud Integration tenant does not have this package deployed. If you are using any of SAP TechEd 2024 Cloud Integration tenants this step is already done - DO NOT DO THIS step.  You should do this only on your own SAP Cloud Integration tenant, if not done.
+If you are using any of SAP TechEd 2024 SAP Cloud Integration tenants this step is already done - <b>SKIP TO THE NEXT EXERCISE</b>.  
+Follow the below steps in your own SAP Cloud Integration tenant only if it does not have this standard package deployed.
 
 1. Go to the Home page of your SAP Integration Suite. Click on the "Discover" button and then "Integrations" on the left navigation pane.
-2. In the search Bar on the right, search for "SAP IBP Reusable"
+2. In the search Bar on the right, search for "<b>SAP IBP - Reusable Integration Flows</b>"
+   
 <br>![](/exercises/ex1/images/01_01_0010.png)
 
-3. If you see the "SAP IBP - Reusable Integration Flows", select it and then press the "Copy" button on the top right corner. This would import the package in your SAP Cloud Integration tenant. 
+3. If you see the "<b>SAP IBP - Reusable Integration Flows</b>", select it and then press the "<b>Copy</b>" button on the top right corner. This would import the package in your SAP Cloud Integration tenant.
+4. Click on Design -> Integrations & APIs, search for the copied "<b>SAP IBP - Reusable Integration Flows</b>" standard package, select and deploy all its artifacts.
 
 ## Exercise 1.4 Copy and Deploy SAP Cloud Integration Session IN280 package
 
