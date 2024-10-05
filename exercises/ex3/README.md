@@ -108,6 +108,6 @@ To execute the copy statement, we need the request-reply-receiver combination. W
 
 ## Summary
 
-In this excercise, When you run this iFlow, you can notice that data is read from SAP IBP and then written to a JSON file in the Staging location. You can use any suitable tool to read this file on the S3 bucket. At the end, a copy statement is executed by hte adapter to move the file contents from the staging location into the database.
+In this excercise, When you run this iFlow, you can notice that data is read from SAP IBP and then written to a JSON file in the Staging location. You can use any suitable tool to read this file on the S3 bucket. At the end, a copy statement is executed by Snowflake adapter to move the file contents from the staging location into the database.
 
 In the next step we will work with the iFlow to read data from Snowflake database table and then store it in the planning area in SAP IBP. Click here to continue - [Exercise 4 - Reading from Snowflake and writing to SAP IBP ](../ex4/README.md)
