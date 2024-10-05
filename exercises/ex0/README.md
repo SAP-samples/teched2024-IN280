@@ -31,7 +31,7 @@ Snowflake refers to the location of data files in a cloud storage as a stage. We
 
 You need a Snowflake account to do these excercises. You can also complete these with a trial account on Snowflake at the moment. You need admin rights on your account. We will do the following steps in the [Exercise 2 - Environment Setup - 2](../ex2/README.md)
 1. Create a database on a schema and remember these details. In our excercise we use the PUBLIC schema and a database name - TEST_DB.
-2. Also create an external stage using the [Snowflake docuemntation](https://docs.snowflake.com/en/user-guide/data-load-overview). In this example, we use AWS S3 bucket as an external stage. In Snowflake we created an Amazon S3 external stage by following [the steps describe here](https://docs.snowflake.com/en/user-guide/data-load-s3)
+2. Also create an external stage using the [Snowflake documentation](https://docs.snowflake.com/en/user-guide/data-load-overview). In this example, we use AWS S3 bucket as an external stage. In Snowflake we created an Amazon S3 external stage by following [the steps described here](https://docs.snowflake.com/en/user-guide/data-load-s3)
 
 After completing these steps you will have....
 
