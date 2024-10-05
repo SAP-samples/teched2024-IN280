@@ -45,10 +45,10 @@ Follow the below steps in your own SAP Cloud Integration tenant only if it does 
 
 ## Exercise 1.4 Copy and Deploy SAP Cloud Integration Session IN280 package
 
-<b>IMPORTANT</b>:- Create a package for your user like this - Session IN280 User XX. For example:- <b>SIN280 User 13</b>
+<b>IMPORTANT</b>:- Create a package for your user like this - Session IN280 User XX. For example:- <b>Session IN280 User 13</b>
 
 1. Go to the Home page of your SAP Integration Suite. Click on the "Design" button and then "Integrations and APIs" on the left navigation pane.
-2. Click on the "Create" Button on the top right to create a new Package with the name - "SIN280 User XX"
+2. Click on the "Create" Button on the top right to create a new Package with the name - "Session IN280 User XX"
 <br>![](/exercises/ex1/images/01_02_0010.png).
 
 3. Give it a short description, version and your name as vendor and press the "Save" button on the top right corner. Click on the "Design" button and then "Integrations and APIs" on the left navigation pane. You should now see your package in the list of packages.
