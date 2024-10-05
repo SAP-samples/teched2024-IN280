@@ -10,9 +10,9 @@ This session is aimied to help participants to use SAP Integration Suite as a mi
 
 <br>![](/exercises/ex0/images/00_00_0010.png)
 
-## Requirements
+## Pre-requisites
 
-The Pre-requisites requirements to follow the exercises in this repository are:
+The requirements to follow the exercises in this repository are:
 
 
 - [Getting Started](exercises/ex0/)
