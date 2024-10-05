@@ -4,7 +4,7 @@ Once the pre-requisites are completed, we can now start to read data from SAP IB
 <br/><br/>![](/exercises/ex4/images/04_01_0010_2.png)
 
 ## Exercise 4.1 Overview
-The package you created and imported the sample contents have 2 iflows. One is for writing data from Snowflake into SAP IBP. For this purposes, we have the "<i>Write to IBP with data from Snowflake</i>" iFlow. This is a custom iFlow. It receives the parameters from an external trigger or via the configurable screen. It uses the standard reusable iflows from SAP to import data in batches. It communicates with SAP IBP using Websocket RFC calls using the destination we have defined in BTP Cockpit. Writing data to SAP IBP is done in an asynchronous way. First a batch is create, then data is written using the batch ID in a continuous loop to the staging location in SAP IBP planning area tables. Once all data packets are written, a post processing job is trigered which would validate the written data. On this change, data is then copied from staging tables into the actual tables of the planning area. 
+The package you created and imported the sample contents have 2 iflows. One is for writing data from Snowflake into SAP IBP. For this purposes, we have the "<b><i>Write to IBP with data from Snowflake</i></b>" iFlow. This is a custom iFlow. It receives the parameters from an external trigger or via the configurable screen. It uses the standard reusable iflows from SAP to import data in batches. It communicates with SAP IBP using Websocket RFC calls using the destination we have defined in BTP Cockpit. Writing data to SAP IBP is done in an asynchronous way. First a batch is create, then data is written using the batch ID in a continuous loop to the staging location in SAP IBP planning area tables. Once all data packets are written, a post processing job is trigered which would validate the written data. On this change, data is then copied from staging tables into the actual tables of the planning area. 
 
 ## Exercise 4.2 Configure the parameters for the Custom iFlow.
 For the flow to work we need the following configuration, which can be sent as a JSON payload or configured via the User Interface in the iFlow.
@@ -26,7 +26,7 @@ For the flow to work we need the following configuration, which can be sent as a
 
 
 ## Exercise 4.3 Selecting data.
-To execute the select statement on Snowflake, we ned the request-reply-receiver combination. We consider the Snowflake adapter as the adapter type. The configuration of this adapter is as follows:
+To execute the select statement on Snowflake, we need the request-reply-receiver combination. We select the Snowflake adapter as the adapter type. The configuration of this adapter is as follows:
 
 ### Connection
 The following details would establish the connection betweeen SAP Cloud Integration and Snowflake database directly.
@@ -41,7 +41,7 @@ The following details would establish the connection betweeen SAP Cloud Integrat
 | Warehouse        | SFWarehouse    | Name of your Snowflake warehouse    | 
 
 ### Processing
-In the processing tab, it is possible to define what you like to do on that established connection. For showing the flexibility of options, we have considered to execute a select statement. For this select the Operation as "Execute" from the drop down menu.
+In the processing tab, it is possible to define what you like to do on that established connection. For showing the flexibility of options, we have considered to execute a select statement. For this select the Operation as "<b>Execute</b>" from the drop down menu.
 
 | Parameter        | Example value  | Description |
 | :---             | :---           | :---          | 
@@ -49,7 +49,7 @@ In the processing tab, it is possible to define what you like to do on that esta
 | SQL Statement    | Select * ...   | Valid SQL statement - do test this on your Snowflake instance before using it here | 
 
 ## Exercise 4.4 Mapping.
-Once data is read from Snowflake, it may be be mapped to the key figure definition in SAP IBP. In the FETCH and WRITE local sub process, there is a local process "MAP and POST to IBP". It contains a XSLT script to map the Snowflake payload to the SAP IBP multimap structure. One can change this to adapt the payload from Snowflake to the RFC payload structure for SAP IBP. Here is the sample content which can be used as a reference.
+Once data is read from Snowflake, it may be be mapped to the key figure definition in SAP IBP. In the FETCH and WRITE local sub process, there is a local process "<b>MAP and POST to IBP</b>". It contains a XSLT script to map the Snowflake payload to the SAP IBP multimap structure. One can change this to adapt the payload from Snowflake to the RFC payload structure for SAP IBP. Here is the sample content which can be used as a reference.
 ```xslt
  <multimap:Messages>
            <multimap:Message1> 
