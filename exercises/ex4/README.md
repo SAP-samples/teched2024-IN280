@@ -1,7 +1,7 @@
 # Exercise 4 - Reading from Snowflake and writing it to SAP IBP
 
 Once the pre-requisites are completed, we can now start to read data from SAP IBP. At a high level, the end to end flow would look like this,
-<br>![](/exercises/ex4/images/04_01_0010.png)
+<br/><br/>![](/exercises/ex4/images/04_01_0010_2.png)
 
 ## Exercise 4.1 Overview
 The package you created and imported the sample contents have 2 iflows. One is for writing data from Snowflake into SAP IBP. For this purposes, we have the "<i>Write to IBP with data from Snowflake</i>" iFlow. This is a custom iFlow. It receives the parameters from an external trigger or via the configurable screen. It uses the standard reusable iflows from SAP to import data in batches. It communicates with SAP IBP using Websocket RFC calls using the destination we have defined in BTP Cockpit. Writing data to SAP IBP is done in an asynchronous way. First a batch is create, then data is written using the batch ID in a continuous loop to the staging location in SAP IBP planning area tables. Once all data packets are written, a post processing job is trigered which would validate the written data. On this change, data is then copied from staging tables into the actual tables of the planning area. 
