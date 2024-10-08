@@ -10,12 +10,12 @@ Here is a list of requirements which you have to full fill before you start doin
 
 ## SAP Integration Suite
 
-1. You can create a user using the [TechEd Tenant Booker Application](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html) for the test SAP Cloud Integration tenant which can be used for this excercise. Utilize your S-user, D-user or I-user to create your user. If you missed to save the tenant url, credentials, no problem - you see the same data again if you re-open the app. Navigate from the booker tool to the Integration Suite instance you are assigned to by clicking the corresponding link (marked in red on the snapshot above). Optionally you can bookmark the opened Integration Suite url for later direct access.
+1. You can create a user using the [TechEd Tenant Booker Application](https://techedtenantbookerapplication-ad5b9d48b.dispatcher.hana.ondemand.com/index.html) for the test SAP Cloud Integration tenant which can be used for this excercise. Utilize your S-user, D-user or I-user to create your user. If you missed to save the tenant url, credentials, no problem - you see the same data again if you re-open the app. Navigate from the booker tool to the Integration Suite instance you are assigned to by clicking the corresponding link (marked in red on the snapshot below). Optionally you can bookmark the opened Integration Suite url for later direct access.
 3. Save your user ID, password as well as the oAuth credentails which you would need to trigger the iFlows from a HTTPs client such as Postman or Bruno.
 
 <b>Remember</b>:- <ul>
     <li>The system access for the participants will be open till <b>25.10.2024 EOB (Walldorf, Germany timezone)</b> only.
-    <li>If you need assistance later on in one of the steps of the exercise please provide your user ID and the tenant (both marked in red above), so that we can find your content</li>
+    <li>If you need assistance later on in one of the steps of the exercise please provide your user ID and the tenant (both marked in red below), so that we can find your content<br>![](images/00_00_0020.gif) </li>
     <li>You would not be able to access the BTP sub account for this test tenant.</li> 
     <li>You have to use your own sub account to create destinations for your SAP IBP instance and communication setup. We will do the these steps in the [Exercise 1 - Environment Setup - 1](../ex1/README.md). You can repeate these steps on your own SAP Cloud Integration tenant for which you have SAP BTP Cockpit access.</li>
 </ul>
