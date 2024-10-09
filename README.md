@@ -2,7 +2,8 @@
 
 ## Description
 
-This repository contains the material for the SAP TechEd 2024 session IN280 - Use SAP Integration Suite with SAP IBP and third-party systems.  
+This repository contains the material for the SAP TechEd 2024 session IN280 - Use SAP Integration Suite with SAP IBP and third-party systems.
+Click the following link to check the [Session IN280 Presentation](SAPTechEd2024-IN280.pdf) 
 
 ## Overview
 
