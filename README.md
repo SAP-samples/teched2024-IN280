@@ -7,7 +7,7 @@ Click the following link to check the [Session IN280 Presentation](SAPTechEd2024
 
 ## Overview
 
-This session is aimied to help participants to use SAP Integration Suite as a middleware for integrating SAP IBP and non-SAP cloud technologies. In this session we will be using Amazon AWS S3 and Snowflake as non-SAP cloud services / third-party systems.
+This session is aimed to help participants to use SAP Integration Suite as a middleware for integrating SAP IBP and non-SAP cloud technologies. In this session we will be using Amazon AWS S3 and Snowflake as non-SAP cloud services / third-party systems. [A blog on this is also available](https://community.sap.com/t5/technology-blogs-by-sap/exchanging-sap-ibp-data-using-the-native-snowflake-adapter-in-sap-cloud/ba-p/13957312)
 
 <br>![](/exercises/ex0/images/00_00_0010.png)
 
